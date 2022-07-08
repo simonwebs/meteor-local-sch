@@ -17,9 +17,7 @@ import '../app/api/publications/ContactsPublication';
 import '../app/api/publications/EnrollementsPublication';
 import '../app/api/publications/ReEnrollementsPublication';
 import '../app/api/publications/EmploymentsPublication';
-
 import { WalletsCollection } from '../app/api/collections/WalletsCollection';
-
 import '../infra/CustomError';
 
 Meteor.startup(() => {

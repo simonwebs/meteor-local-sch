@@ -10,7 +10,7 @@ export const App = () => (
 
     <div>
    <Header />
-    <div id="testimonials" className="dark:bg-blueDark
+    <div id="about" className="dark:bg-blueDark
      bg-white ring-slate-900/5  dark:text-white">
   <Outlet />
     </div>

@@ -24,7 +24,7 @@ react-meteor-data       # React higher-order component for reactively tracking M
 aldeed:collection2
 matb33:collection-hooks
 tracker
-accounts-password
+
 dev-error-overlay
 mdg:seo
 mdg:validated-method
