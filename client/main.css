@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: Poppins, sans-serif;
+  /* 4 */
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0;
+   background-image: url('./img/background-faqs.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#nav{
+  background-image: url('./img/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 75;
+}
+#contact{
+  background-image: url('./img/background-faqs.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#hero{
+  background-image: url('./img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#gallery{
+  background-image: url('./img/background-faqs.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#blog{
+  background-image: url('./img/background-faqs.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#testimonials{
+  background-image: url('./img/background-faqs.jpg');
+   background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#footer{
+  background-image: url('./img/bg-header-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
