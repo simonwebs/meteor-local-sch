@@ -177,7 +177,7 @@ export const Navbar = () => {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-slate-300 ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none">
+                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-slate-50 ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none">
                         <div onClick={() => setNavbarOpen(!open)} className="py-1">
                           <Menu.Item>
                             {({ active }) => (
@@ -278,7 +278,7 @@ export const Navbar = () => {
               </div>
             </div>
          {/*  Mobile */}
-          <Disclosure.Panel className="md:hidden bg-slate-100 dark:bg-blueDark">
+          <Disclosure.Panel className="md:hidden bg-slate-100 dark:bg-slate-800">
           <div onClick={() => setNavbarOpen(!open)} className="pt-2 pb-3 space-y-1">
             {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
           
@@ -286,14 +286,14 @@ export const Navbar = () => {
                     <a
                       href="/"
                       type="button"
-                      className="text-md font-bold shadow-sm relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white hover:bg-sky-500/80  hover:text-white rounded-r-full"
+                      className="bg-slet-50 text-md font-bold shadow-sm relative inline-flex items-center px-3 py-1 border border-transparent dark:text-slate-50 hover:bg-sky-500/80  hover:text-white rounded-r-full"
                     >
                       <span>Home</span>
                     </a>
                   </div>
                  <Menu as="div" className="relative z-30 inline-block text-left py-5">
                     <div>
-                      <Menu.Button className="bg-slate-200 text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full">
+                      <Menu.Button className="bg-slate-50 backdrop:text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full">
                        Company
                         <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
                       </Menu.Button>
@@ -307,14 +307,14 @@ export const Navbar = () => {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-slate-300 ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none">
+                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-slate-50  divide-y divide-gray-100 focus:outline-none">
                         <div onClick={() => setNavbarOpen(!open)} className="py-1">
                           <Menu.Item>
                             {({ active }) => (
                               <a
                                 href="about"
                                 className={classNames(
-                                  active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                  active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
@@ -327,7 +327,7 @@ export const Navbar = () => {
                               <a
                                 href="gallery"
                                 className={classNames(
-                                  active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                  active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
@@ -340,7 +340,7 @@ export const Navbar = () => {
                               <a
                                 href="testimonials"
                                 className={classNames(
-                                  active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                  active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
@@ -355,7 +355,7 @@ export const Navbar = () => {
                               <a
                                 href="sermon"
                                 className={classNames(
-                                  active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                  active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
@@ -370,7 +370,7 @@ export const Navbar = () => {
                     <div> 
                      <Menu as="div" className="relative z-20 inline-block text-left py-5">
                     <div>
-                      <Menu.Button className="bg-slate-200 text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full">
+                      <Menu.Button className="bg-slate-50 text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full">
                        Applications
                         <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
                       </Menu.Button>
@@ -384,14 +384,14 @@ export const Navbar = () => {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-slate-300 ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none">
+                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-slate-50 ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none">
                         <div onClick={() => setNavbarOpen(!open)} className="py-1">
                           <Menu.Item>
                             {({ active }) => (
                               <a
                                 href="enrollement"
                                 className={classNames(
-                                  active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                  active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
@@ -404,7 +404,7 @@ export const Navbar = () => {
                               <a
                                 href="reEnrollement"
                                 className={classNames(
-                                  active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                  active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
@@ -417,7 +417,7 @@ export const Navbar = () => {
                               <a
                                 href="employment"
                                 className={classNames(
-                                  active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                  active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
@@ -432,7 +432,7 @@ export const Navbar = () => {
                               <a
                                 href="donation"
                                 className={classNames(
-                                  active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                  active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
@@ -448,7 +448,7 @@ export const Navbar = () => {
                     <a
                       href="blog"
                       type="button"
-                      className="bg-slate-200 text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full"
+                      className="bg-slate-50 text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full"
                     >
                       <span>News</span>
                     </a>

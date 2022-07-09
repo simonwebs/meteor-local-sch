@@ -383,7 +383,7 @@ const saveEmployment = () => {
                     id="identityRef"
                     value={identityRef}
                     onChange={e => setIdentityRef(e.target.value)}
-                    className="focus:ring-sky-500 text-gray-500 focus:border-sky-500 block hover:bg-slate-500 hover:text-whiteblock w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                    className="focus:ring-sky-500 text-gray-500 focus:border-sky-500 hover:bg-slate-500 hover:text-white block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
                     placeholder="Id number :"
                   />
                 </div>

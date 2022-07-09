@@ -44,7 +44,7 @@ export const EmploymentList = () => {
                         <dl className="mt-1 flex-grow flex flex-col justify-between">
         
         </dl>
-        <div className="bg-gray-800 rounded-md">
+        <div className="bg-gray-800">
         <a
           href="#"
           onClick={(event) => removeEmployment(event, employment._id)}
