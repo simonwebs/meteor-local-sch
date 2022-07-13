@@ -9,12 +9,12 @@ import {FaChurch , FaStreetView, FaWallet, FaClinicMedical } from "react-icons/f
 import { BsFillCalendarDateFill, BsGenderMale } from "react-icons/bs";
 import {GoGlobe} from "react-icons/go";
 import { RiParentFill, } from "react-icons/ri";
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 export const Enrollement = (props) => {
- 
+
  const [name, setName] = useState(''); // Formik
 
   const [male, setMale] = useState('');
@@ -136,7 +136,9 @@ const saveEnrollement = () => {
  <div  className="bg-transparent dark:bg-gradient-to-r from-sky-100  via-cyan-500 to-rose-100 mt-16 min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="dark:bg-gradient-to-l from-sky-800 to-cyan-700 rounded-2xl max-w-md w-full space-y-8">
           <div>
-        
+          <div className="container mt-5">
+			
+		</div>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-slate-400 dark:text-white">Student Enrollement Form</h2>
            
           </div>
@@ -479,7 +481,7 @@ const saveEnrollement = () => {
 
               <button
                 onClick={saveEnrollement}
-                className="bg-gradient-to-l  p-2 px-4 pt-2 mt-3 text-white dark:bg-gradient-to-l from-sky-800 to-cyan-700 rounded-lg baseline hover:bg-cyan-400"
+                className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 <span>Save Information</span>
               </button>

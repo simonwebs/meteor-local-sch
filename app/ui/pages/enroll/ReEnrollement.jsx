@@ -9,8 +9,6 @@ import { MailIcon } from '@heroicons/react/solid'
 import { HiUserCircle, HiPhotograph, HiPhone,  HiBriefcase } from "react-icons/hi";
 import { FaStreetView, FaWallet } from "react-icons/fa";
 import { BsFillCalendarDateFill, BsGenderMale } from "react-icons/bs";
-import {GoGlobe} from "react-icons/go";
-import { RiParentFill, } from "react-icons/ri";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -93,7 +91,7 @@ const saveReEnrollement = () => {
               {success && <SuccessAlert message={success} />}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                 <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-500 dark:text-white">
+                <label htmlFor="name" className="block text-sm font-medium text-slate-500 dark:text-white">
         Full Name
       </label>
       <div className="mt-1 relative rounded-md shadow-sm">
@@ -108,7 +106,6 @@ const saveReEnrollement = () => {
                     placeholder="Full Name"
                     autoComplete="name"
                     className="focus:ring-sky-500 focus:border-sky-500 hover:bg-slate-500 hover:text-white block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
-                    placeholder="Your Full Name"
                   />
                 </div>
               </div>
@@ -205,7 +202,7 @@ const saveReEnrollement = () => {
                     value={street}
                     onChange={e => setStreet(e.target.value)}
                     placeholder="Street Address"
-                    className="focus:ring-sky-500 focus:border-sky-500 hover:bg-slate-500 hover:text-white file: w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                    className="focus:ring-sky-500 focus:border-sky-500 hover:bg-slate-500 hover:text-white block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
 
                   />
                 </div>
@@ -289,7 +286,7 @@ const saveReEnrollement = () => {
     </div>
               <button
                 onClick={saveReEnrollement}
-                className="bg-gradient-to-l  p-2 px-4 pt-2 mt-3 text-white dark:bg-gradient-to-l from-sky-800 to-cyan-700 rounded-lg baseline hover:bg-cyan-400"
+                className="bg-gradient-to-l  p-2 px-4 pt-2 mt-7 text-white dark:bg-gradient-to-l from-sky-800 to-cyan-700 rounded-lg baseline hover:bg-cyan-400"
               >
                 <span>Save Information</span>
               </button>

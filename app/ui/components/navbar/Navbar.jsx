@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { Fragment, useEffect, useState } from 'react';
 //import { Link } from 'react-router-dom';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
@@ -44,7 +45,7 @@ export const Navbar = () => {
    });
 
   return (
-      <Disclosure as="nav" className="w-full text-gray-700  h-16 fixed top-0 animated z-40 bg-white dark:bg-slate-900 shadow-sm" data-aos="fade-down">
+      <Disclosure as="nav" className="w-full text-gray-700  h-16 fixed top-0 animated z-40 bg-white dark:bg-slate-800 shadow-lg" data-aos="fade-down">
         {({ open }) => (
           <>
             <div  className="max-w-7xl mx-auto px-4 z-10 :px-6 lg:px-8">
@@ -158,6 +159,21 @@ export const Navbar = () => {
                             )}
                           </Menu.Item>
                         </div>
+                        <div className="py-1">
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="sermon"
+                                className={classNames(
+                                  active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
+                                  'block px-4 py-2 text-sm'
+                                )}
+                              >
+                            Sermon
+                              </a>
+                            )}
+                          </Menu.Item>
+                        </div>
                       </Menu.Items>
                     </Transition>
                     </Menu>
@@ -240,7 +256,7 @@ export const Navbar = () => {
                     <div className="flex items-center">
                   <div className="flex-shrink-0">
                     <a
-                      href="/blog"
+                      href="blogsPage"
                       type="button"
                       className="text-md font-bold shadow-lg relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white hover:bg-sky-500/80  hover:text-white rounded-r-full"
                     >
@@ -262,12 +278,13 @@ export const Navbar = () => {
                     </button>
                     </div>
                 </div>
+              
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
                     <a
                       href="loginForm"
                       type="button"
-                      className="bg-slate-50 text-md font-bold shadow-lg dark:bg-slate-800 relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white hover:bg-sky-500/80  hover:text-white rounded-r-full"
+                      className="bg-slate-50 backdrop:text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full"
                     >
                       <GoSignIn className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
                       <span>Login</span>
@@ -446,7 +463,7 @@ export const Navbar = () => {
                     </Menu>
                     <div id='nav' className="flex-shrink-0">
                     <a
-                      href="blog"
+                      href="blogsPage"
                       type="button"
                       className="bg-slate-50 text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full"
                     >

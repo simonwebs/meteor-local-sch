@@ -1,131 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const Donation = () => {
+  const [cardDetails, setCardDetails] = useState({
+    account_holder: 'John Doe Wick',
+    card_number: '1515 1212 1313 1313',
+    exp_month: '11',
+    exp_year: '21'
+  })
   return (
     <>
-      <div id="footer" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center py-8 mt-16 rounded-lg bg-transparent dark:bg-gradient-to-l from-sky-800 to-cyan-700 text-slate-500 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px">
-        <div className="max-w-7xl mx-auto px-4 rounded-lg flex-1  bg-slate-50 shadow-lg p-5 text-gray-700">
-          <div className="max-w-3xl mx-auto pt-1 pb-5">
-            <div className="bg-gradient-to-l from-sky-800 to-cyan-700 text-white overflow-hidden rounded-full w-20 h-20 mx-auto shadow-lg flex justify-center items-center">
-              <i className="mdi mdi-credit-card-outline text-3xl"></i>
-            </div>
+      <div className="container-full w-screen h-screen bg-gradient-to-br from-sky-500 to-purple-500 flex items-center">
+      <div className="container flex bg-slate-800 text-gray-300 h-screen items-center px-4">
+        <div className="flex-col px-4">
+          <h1 className="text-2xl font-semibold text-center 
+          bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-blue-500">PLEASE MAKE YOUR PAYMENT</h1>
+          <small className="text-gray-400 text-center block">Enter credit card details</small>
+          <hr className="opacity-20 mt-6 mb-8" />
+            <input type="text" className="w-full py-2 mb-3 rounded-md ml-1.5 bg-gray-700 text-gray-200 px-2"
+            placeholder="Account Holder" onBlur={(e) => setCardDetails(current => ({...current, account_holder : e.target.value}))} />
+            <input type="text" className="w-full py-2 mb-3 rounded-md ml-1.5 bg-gray-700 text-gray-200 px-2"
+            placeholder="Card Number" onBlur={(e) => setCardDetails(current => ({...current, card_number : e.target.value}))}/>
+          <div className="flex">
+            <input type="text" className="py-2 w-1/2 rounded-md ml-1.5 bg-gray-700 text-gray-200 px-2"
+            placeholder="Month" onBlur={(e) => setCardDetails(current => ({...current, exp_month : e.target.value}))}/>
+            <input type="text" className="py-2 w-1/2 rounded-md ml-1.5 bg-gray-700 text-gray-200 px-2"
+            placeholder="Year" onBlur={(e) => setCardDetails(current => ({...current, exp_year : e.target.value}))}/>
           </div>
-          <div className="mb-10">
-            <h1 className="text-center font-bold text-xl uppercase">
-              Secure payment info
-            </h1>
-          </div>
-          <div className="mb-3 flex -mx-2">
-            <div className="px-2">
-              <label
-                htmlFor="type1"
-                className="flex items-center cursor-pointer"
-              >
-                <input
-                  type="radio"
-                  className="form-radio h-5 w-5 text-indigo-500"
-                  name="type"
-                  id="type1"
-                  checked
-                />
-                <img
-                  src="https://leadershipmemphis.org/wp-content/uploads/2020/08/780370.png"
-                  className="h-8 ml-3"
-                />
-              </label>
-            </div>
-            <div className="px-2">
-              <label
-                htmlFor="type2"
-                className="flex items-center cursor-pointer"
-              >
-                <input
-                  type="radio"
-                  className="form-radio h-5 w-5 text-indigo-500"
-                  name="type"
-                  id="type2"
-                />
-                <img
-                  src="https://www.sketchappsources.com/resources/source-image/PayPalCard.png"
-                  className="h-8 ml-3"
-                />
-              </label>
-            </div>
-          </div>
-          <div className="mb-3">
-            <label className="font-bold text-sm mb-2 ml-1">Name on card</label>
-            <div>
-              <input
-                className="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
-                placeholder="John Smith"
-                type="text"
-              />
-            </div>
-          </div>
-          <div className="mb-3">
-            <label className="font-bold text-sm mb-2 ml-1">Card number</label>
-            <div>
-              <input
-                className="w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors"
-                placeholder="0000 0000 0000 0000"
-                type="text"
-              />
-            </div>
-          </div>
-          <div className="mb-3 -mx-2 flex items-end">
-            <div className="px-2 w-1/2">
-              <label className="font-bold text-sm mb-2 ml-1">
-                Expiration date
-              </label>
-              <div>
-                <select className="form-select w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors cursor-pointer">
-                  <option value="01">01 - January</option>
-                  <option value="02">02 - February</option>
-                  <option value="03">03 - March</option>
-                  <option value="04">04 - April</option>
-                  <option value="05">05 - May</option>
-                  <option value="06">06 - June</option>
-                  <option value="07">07 - July</option>
-                  <option value="08">08 - August</option>
-                  <option value="09">09 - September</option>
-                  <option value="10">10 - October</option>
-                  <option value="11">11 - November</option>
-                  <option value="12">12 - December</option>
-                </select>
-              </div>
-            </div>
-            <div className="px-2 w-1/2">
-              <select className="form-select w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-bg-gradient-to-l from-sky-800 to-cyan-700  transition-colors cursor-pointer">
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-                <option value="2027">2027</option>
-                <option value="2028">2028</option>
-                <option value="2029">2029</option>
-              </select>
-            </div>
-          </div>
-          <div className="mb-10">
-            <label className="font-bold text-sm mb-2 ml-1">Security code</label>
-            <div>
-              <input
-                className="w-32 px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-bg-gradient-to-l from-sky-800 to-cyan-700 transition-colors"
-                placeholder="000"
-                type="text"
-              />
-            </div>
-          </div>
-          <div>
-            <button className="block w-full max-w-xs mx-auto bg-gradient-to-l from-sky-800 to-cyan-700  hover:bg-bg-gradient-to-l focus:bg-sky-500 text-white rounded-lg px-3 py-3 font-semibold">
-              <i className="mdi mdi-lock-outline mr-1"></i> PAY NOW
-            </button>
-          </div>
+          <button className="btn-pay w-full mt-5 rounded-full px-6 py-2 bg-gradient-to-r from-pink-400 to-purple-500"
+          onClick={() => {
+            document.querySelector('.card').classList.add('animate-pulse')
+            document.querySelector('.bg-circles').classList.add('animate-ping')
+            setTimeout(() => {
+              document.querySelector('.card').classList.remove('animate-pulse')
+              document.querySelector('.bg-circles').classList.remove('animate-ping')
+            }, 5000);
+          }}
+          >Pay Now</button>
         </div>
       </div>
+      <div className="container mr-auto flex items-center justify-center">
+        <div className="px-3 py-5 grid grid-cols-2 grid-rows-4 justify-center 
+        relative z-10 
+        bg-gradient bg-gradient-to-br from-gray-300 to-transparent w-1/2 
+        bg-opacity-20 h-80 rounded-md shadow-md card">
+        <img src="https://pngimage.net/wp-content/uploads/2018/05/chip-credit-card-png-7.png" 
+            className="w-8 h-8 mx-auto col-span-2" />
+            <h1 className="col-span-2 text-2xl font-semibold">{cardDetails.account_holder}</h1>
+            <p className="col-span-2 text-gray-800 font-medium">{cardDetails.card_number}</p>
+            <p><span className="text-xs text-gray-700">EXP DATE</span> {cardDetails.exp_month}/{cardDetails.exp_year}</p>
+              <img src="https://png2.cleanpng.com/sh/374afa6ac89d40450e1a0e44b568f01c/L0KzQYm3VMA0N5J3j5H0aYP2gLBuTf1ie6VqitVqcnSwc8PshPl1NZRmitY2dnn2cX73gglubZ95ReVucobsc7a0jfF0fJZ3e9N7ZD24cbS6hvFmP2IAfKJsNj67Qoe4VsQ0OGI6SqQCOUO0SYK4UMU5NqFzf3==/kisspng-mastercard-credit-card-visa-payment-service-mastercard-5ac3fae719d0c6.8261643015227931911058.png" 
+            className="w-10 h-10 ml-auto my-auto" />
+        </div>
+        <div className="rounded-full h-40 w-40 absolute top-1/4 right-7 bg-gradient-to-br from-white to-transparent z-0"></div>
+        <div className="rounded-full h-20 w-20 absolute bottom-1/3 right-1/3 bg-gradient-to-tl from-white to-transparent z-0"></div>
+        <div className="bg-circles rounded-full h-10 w-10 absolute bottom-1/4 right-1/4 bg-gradient-to-b from-white to-transparent z-0"></div>
+      </div>
+    </div>
     </>
   );
 };

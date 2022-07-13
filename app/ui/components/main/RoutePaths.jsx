@@ -1,7 +1,8 @@
 export const RoutePaths = {
     ROOT: '/',
     HOME: 'home',
-    BLOG: 'blog',
+    BLOGSPAGE: 'blogsPage',
+    BLOGFORM: 'blogForm',
     TESTIMONIALS:'testimonials',
     LOGINFORM: 'loginForm',
     ABOUT: 'about',
@@ -17,11 +18,11 @@ export const RoutePaths = {
     PAYMENT: 'payment',
     FEES: 'fees',
     SERMON: 'sermon',
+    PLAYGROUND: 'playGround',
     CONTACTLIST: 'contactList',
     CONTACTFORM: 'contactForm',
     ADMIN: 'admin',
     SETTINGS: 'settings',
-   
 
 };
    

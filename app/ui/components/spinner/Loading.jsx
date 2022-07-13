@@ -1,14 +1,14 @@
-import React from 'react';
+// @ts-nocheck
+import React from "react";
+import { css } from "@emotion/react";
+import RiseLoader from "react-spinners/ClipLoader";
 
-export const Loading = () => (
-          <div className="flex items-center justify-center w-screen max-h-screen">
-            <div className="flex items-center rounded-2xl bg-cyan-400 px-4 py-2 text-white">
-            <button type="button" className="bg-indigo-500 ..." disabled>
-  <svg className="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
+export const LoadingComponent = () => {
+  return <RiseLoader color="red" loading={true} css={override} size={90} />;
+};
 
-  </svg>
-  Processing...
-</button>
-            </div>
-          </div>
-  );

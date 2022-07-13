@@ -10,6 +10,8 @@ import { HiUserCircle, HiPhotograph, HiPhone, HiBriefcase } from "react-icons/hi
 import {FaChurch , FaStreetView, FaRegAddressCard, FaWallet,FaClinicMedical } from "react-icons/fa";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 import { GoGlobe } from "react-icons/go";
+import { UploadIcon } from "@heroicons/react/outline";
+
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -301,7 +303,7 @@ const saveEmployment = () => {
       </label>
       <div className="mt-1 relative rounded-md shadow-sm">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <HiPhotograph className="h-5 w-5 text-sky-400" aria-hidden="true" />
+          <UploadIcon className="h-5 w-5 text-sky-400" aria-hidden="true" />
         </div>
                   <input
                     type="imageUrl"

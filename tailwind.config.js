@@ -1,6 +1,6 @@
 // @ts-nocheck
-//const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors')
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: ['./app/ui/**/*.{js,jsx,ts,tsx}', './client/*.html'],
@@ -49,10 +49,6 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
       },
-      // fontFamily: {
-      //   sans: ['Inter', ...defaultTheme.fontFamily.sans],
-      //   display: ['Lexend', ...defaultTheme.fontFamily.sans],
-      // },
       maxWidth: {
         '2xl': '40rem',
       },

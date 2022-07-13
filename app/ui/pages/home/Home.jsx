@@ -3,7 +3,38 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Testimonials } from '../testimonial/Testimonials';
+import { NewspaperIcon, PhoneIcon, SupportIcon } from '@heroicons/react/outline'
 
+const supportLinks = [
+  {
+    name: 'Contact Us',
+    href: '#',
+    description:
+      'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+    icon: PhoneIcon,
+  },
+  {
+    name: 'Enrollement',
+    href: 'enrollement',
+    description:
+      'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+    icon: SupportIcon,
+  },
+  {
+    name: 'Re-Enrollment',
+    href: 'reEnrollement',
+    description:
+      'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+    icon: NewspaperIcon,
+  },
+  {
+    name: 'Employment',
+    href: 'employment',
+    description:
+      'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+    icon: NewspaperIcon,
+  },
+]
 
 const posts = [
   {
@@ -60,6 +91,7 @@ function classNames(...classes) {
 }
 
 export const Home = () => {
+
       useEffect(() => {
     AOS.init({
       delay: 200,
@@ -70,50 +102,58 @@ export const Home = () => {
    });
   return (
     <main>
-    <section id="nav" className="bg-slate-200 dark:bg-slate-800" data-aos="fade-left"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-        <div  className=' animated z-40 bg-transparent mt-16 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:px-8'>
-        <div  className="rounded-2xl shadow-5xl relative z-2  border-opacity-30 backdrop-filter backdrop-blur-lg pb-3 pt-8 sm:pb-16 sm:pt-10 lg:pt-16"
-    >
-      <div  className="absolute inset-x-0 bottom-0 top-1/2 bg-slate-100 opacity-.5 dark:bg-slate-800text-slate-900/10 [mask-image:linear-gradient(transparent,transparent)]">
-        <div x="50%" y="100%" />
-      </div>
-      <div id="hero" className="relative bg-white rounded-2xl mx-auto max-w-5xl mt-20 placeholder:pt-16 sm:px-6">
-        <div className="relative rounded-lg pt-px sm:rounded-6xl">
-          <div className="relative  mx-auto -mt-16 h-44 w-44 overflow-hidden rounded-full shadow-lg md:float-right md:h-64 md:w-64 md:[shape-outside:circle(40%)]" data-aos="fade-left"
-    data-aos-offset="300"
-    data-aos-easing="ease-in-sine">
-            <img src='./img/photo-1594608661623-aa0bd3a69d98.jpg' className="relative mx-auto h-44 w-44 overflow-hidden rounded-full shadow-lg md:float-right md:h-64 md:w-64" data-aos="fade-right"
-    data-aos-offset="300"
-    data-aos-easing="ease-in-sine" alt="" />
-          </div>
-          <div  className="px-4 py-10 sm:px-10 sm:py-16 md:py-20 lg:px-20 lg:py-32">
-         
-         <div
-          className="max-w-lg text-gray-50 md:text-gray-700 placeholder:dark:text-sky-800 mt-10 mb-22 p-4 font-sans text-4xl uppercase border-2 dark:border-sky-500 md:p-10 md:m-32 md:mx-0 md:text-5xl sm:text-white"
-        >
-        We Approach 
-        Education Deferently.
+      <section className="mt-16 shadow-2xl bg-slate-100 dark:bg-gray-800 rounded-b-lg">
+      {/* Header */}
+      <div className="relative pb-32 bg-gray-800">
+        <div className="absolute inset-0">
+          <img
+            className="w-full h-full object-cover" data-aos="fade-right"
+            src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
+            alt=""
+          />
+          <div className="absolute inset-0 bg-gray-800 mix-blend-multiply" aria-hidden="true" />
         </div>
-            
-            
-            <p className="mt-8">
-              
-             <a
-                href="enrollement" className="p-3 px-6 pt-2 mt-3 text-white bg-sky-500 rounded baseline hover:bg-cyan-400" data-aos="fade-right"
-                >
-               <span>Get Started</span>
-                </a>
-            </p>
-          </div>
-          </div>
+        <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl" data-aos="fade-right">Welcome</h1>
+          <p className="mt-6 max-w-3xl text-xl text-gray-300">
+            To Cedar Christian Bilingual School
+          </p>
+          <p className="mt-2 max-w-3xl text-xl text-gray-300">
+            We approach bilingual programe in deferently.
+          </p>
         </div>
       </div>
-    </div>
-    </section>
 
-    <section id="blog" className="bg-white dark:bg-slate-800 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8" data-aos="fade-left">
+      {/* Overlapping cards */}
+      <div
+        className="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
+        aria-labelledby="contact-heading"
+      >
+        <h2 className="sr-only" id="contact-heading">
+          Contact us
+        </h2>
+        <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-4 lg:gap-y-0 lg:gap-x-8">
+          {supportLinks.map((link) => (
+            <div key={link.name} className="flex flex-col bg-sky-900 dark:bg-slate-800 rounded-2xl shadow-xl" data-aos="fade-left">
+              <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
+                <div className="absolute top-0 p-5 inline-block bg-white dark:bg-slate-800 rounded-2xl shadow-lg transform -translate-y-1/2" data-aos="fade-right">
+                  <link.icon className="h-6 w-6 text-sky-500" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-medium text-white">{link.name}</h3>
+                <p className="mt-4 text-base text-white">{link.description}</p>
+              </div>
+              <div className="p-6 bg-sky-500 dark:bg-slate-700 rounded-bl-2xl rounded-br-2xl md:px-8">
+                <a href={link.href} className="text-white font-medium hover:text-cyan-400">
+                  Click here<span aria-hidden="true"> &rarr;</span>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  
+    <section id="blog" className="bg-transparent dark:bg-slate-800 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8" data-aos="fade-left">
       <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
         <div>
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Recent publications</h2>
@@ -166,7 +206,9 @@ export const Home = () => {
     </section>
 
     <Testimonials />
-   
+   <section>
+  
+   </section>
           </main>
   )
   }

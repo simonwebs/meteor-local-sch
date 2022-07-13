@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-expressions */
 // @ts-nocheck
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import { useSubscribe, useFind } from 'meteor/react-meteor-data';
 // eslint-disable-next-line import/no-unresolved
 import { Loading } from '../../components/spinner/Loading';
-//import { EnrollementList } from '../enroll/EnrollementList';
+// eslint-disable-next-line import/no-unresolved
 import { SelectEnrollement } from '../enroll/SelectEnrollement';
 // eslint-disable-next-line import/no-unresolved
 import { Modal } from '../../components/modal/Modal';
@@ -13,8 +14,8 @@ import { EnrollementsCollection } from '../../../api/collections/EnrollementsCol
 import { WalletsCollection } from '../../../api/collections/WalletsCollection';
 // eslint-disable-next-line import/no-unresolved
 
-export const Wallet = () => {
-   const isLoadingEnrollements = useSubscribe('allEnrollements');
+export const Wallet = (_props) => {
+  const isLoadingEnrollements = useSubscribe('allEnrollements');
   const isLoadingWallets = useSubscribe('wallets');
   const enrollements = useFind(() =>
   EnrollementsCollection.find(

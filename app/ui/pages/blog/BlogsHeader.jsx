@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const LoginForm = () => {
+export const BlogsHeader = () => {
   return (
     <div>
-      
+      <h1>Simple blog</h1>
     </div>
   )
 }
