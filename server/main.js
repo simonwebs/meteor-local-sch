@@ -17,12 +17,6 @@ import '../app/api/methods/ReEnrollementsMethods';
 import '../app/api/methods/TransactionsMethods';
 
 
-import '../app/api/blog/InsertBlogPost'
-import '../app/api/blog/BlogPostsPublication'
-import '../app/api/blog/RemoveBlogPost'
-import '../app/api/blog/ToggleBlogPost'
-import '../app/api/blog/BlogPost'
-
 import '../app/api/publications/WalletsPublications';
 import '../app/api/publications/ContactsPublication';
 import '../app/api/publications/EnrollementsPublication';

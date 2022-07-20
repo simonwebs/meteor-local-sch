@@ -13,44 +13,12 @@ const ContactsSchema = new SimpleSchema({
         type: String,
         regEx: SimpleSchema.RegEx.Email,
       },
-      imageUrl: {
-          type: String,
-          optional: true,
-      },
-          fatherName: {
-          type: String,
-          optional: true,
-      },
-          motherName: {
-          type: String,
-          optional: true,
-      },
-         prevSchool: {
-          type: String,
-          optional: true,
-      },
-          phone: {
-          type: Number,
-          optional: true,
-      },
-          birthDate: {
-          type: String,
-          optional: true,
-      },
-          street: {
-          type: String,
-          optional: true,
-      },
-          gender: {
-          type: String,
-          optional: true,
-      },
-          grade: {
+      subject: {
           type: String,
           optional: true,
       },
 
-        Religion: {
+        message: {
           type: String,
           optional: true,
       },
@@ -58,10 +26,6 @@ const ContactsSchema = new SimpleSchema({
       type: Boolean,
       defaultValue: false,
       },
-     walletId: {
-       type: String,
-       // regEx: SimpleSchema.RegEx.Id,
-   },
    createdAt: {
        type: Date,
    },

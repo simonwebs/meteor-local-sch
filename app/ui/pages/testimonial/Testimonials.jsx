@@ -5,10 +5,10 @@ const testimonials = [
   [
     {
       content:
-        'TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.',
+        'I will never know how fast and strong my children are, if not Cedar Chiristian Bilingual School. The schol really transformed my children into fully bilingial. My children are happy about their teaching methods.',
       author: {
-        name: 'Sheryl Berge',
-        role: 'CEO at Lynch LLC',
+        name: 'Simon Agbey',
+        role: 'Pastor / Software Developer',
         imageSrc: './img/simon.png',
       },
     },
@@ -70,51 +70,44 @@ export const Testimonials = () => {
     <>
   <section
       aria-labelledby="testimonials-title"
-      className="bg-slate-50 dark:bg-slate-800 py-20 sm:py-32" data-aos="fade-right"
+      className="mt-16 bg-transparent dark:bg-slate-800  dark:text-slate-300" data-aos="fade-up"
     >
       <section  id="footer" className='bg-transparent dark:divide-slate-800'>
         <div  className="mx-auto max-w-2xl md:text-center">
           <h2
-            className="font-display dark:text-slate-300 text-3xl tracking-tight bg-transparent dark:divide-slate-800 sm:text-4xl"
+            className="p-4 py-4 font-display dark:text-slate-300 text-3xl tracking-tight bg-transparent dark:divide-slate-800 sm:text-4xl"
           >
             Loved by Parent and Students.
           </h2>
-          <p className="mt-4 text-lg tracking-tight dark:text-slate-300">
-            Our software is so simple that people can’t help but fall in love
+          <p className="p-4 py-4 mt-4 text-lg tracking-tight dark:text-slate-300">
+            Our teaching methods are so simple that student can’t help but fall in love
             with it. Simplicity is easy when you just skip tons of
-            mission-critical features.
+           unercersary things.
           </p>
         </div>
-        <ul className="bg-transparent dark:slate-800 mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3">
+        <ul className="p-8 bg-transparent dark:slate-500 mx-auto shadow-lg mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3">
           {testimonials.map((column, columnIndex) => (
             <li key={columnIndex}>
               <ul className="space-y-6 sm:space-y-8 bg-transparent dark:slate-800">
                 {column.map((testimonial, testimonialIndex) => (
                   <li key={testimonialIndex}>
-                    <figure className="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
-                      <svg
-                        aria-hidden="true"
-                        width={105}
-                        height={78}
-                        className="absolute top-6 left-6 fill-slate-100"
-                      >
-                        <path d="M25.086 77.292c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622C1.054 58.534 0 53.411 0 47.686c0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C28.325 3.917 33.599 1.507 39.324 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Zm54.24 0c-4.821 0-9.115-1.205-12.882-3.616-3.767-2.561-6.78-6.102-9.04-10.622-2.11-4.52-3.164-9.643-3.164-15.368 0-5.273.904-10.396 2.712-15.368 1.959-4.972 4.746-9.567 8.362-13.786a59.042 59.042 0 0 1 12.43-11.3C82.565 3.917 87.839 1.507 93.564 0l11.074 13.786c-6.479 2.561-11.677 5.951-15.594 10.17-3.767 4.219-5.65 7.835-5.65 10.848 0 1.356.377 2.863 1.13 4.52.904 1.507 2.637 3.089 5.198 4.746 3.767 2.41 6.328 4.972 7.684 7.684 1.507 2.561 2.26 5.5 2.26 8.814 0 5.123-1.959 9.19-5.876 12.204-3.767 3.013-8.588 4.52-14.464 4.52Z" />
-                      </svg>
+                    <figure className="relative rounded-2xl bg-transparent shadow-2xl dark:bg-slate-700 dark:text-slate-300 p-6 shadow-slate-900/10">
+                 
                       <blockquote className="relative">
-                        <p className="text-lg tracking-tight text-slate-900">
+                        <p className="text-lg tracking-tight dark:text-slate-300">
                           {testimonial.content}
                         </p>
                       </blockquote>
                       <figcaption className="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
                         <div>
-                          <div className="font-display text-base text-slate-900">
+                          <div className="font-display text-base dark:text-slate-300">
                             {testimonial.author.name}
                           </div>
-                          <div className="mt-1 text-sm text-slate-500">
+                          <div className="mt-1 text-sm dark:text-slate-300">
                             {testimonial.author.role}
                           </div>
                         </div>
-                        <div className="h-14 w-14 overflow-hidden rounded-full bg-slate-50">
+                        <div className="h-14 w-14 overflow-hidden rounded-full bg-transparent">
                           <img src={testimonial.author.imageSrc} alt="" />
                         </div>
                       </figcaption>

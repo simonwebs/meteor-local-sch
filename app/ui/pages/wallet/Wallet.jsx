@@ -14,7 +14,7 @@ import { EnrollementsCollection } from '../../../api/collections/EnrollementsCol
 import { WalletsCollection } from '../../../api/collections/WalletsCollection';
 // eslint-disable-next-line import/no-unresolved
 
-export const Wallet = (_props) => {
+export const Wallet = () => {
   const isLoadingEnrollements = useSubscribe('allEnrollements');
   const isLoadingWallets = useSubscribe('wallets');
   const enrollements = useFind(() =>

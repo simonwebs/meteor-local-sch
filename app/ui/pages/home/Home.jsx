@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Testimonials } from '../testimonial/Testimonials';
 import { NewspaperIcon, PhoneIcon, SupportIcon } from '@heroicons/react/outline'
+import { HomePage } from '../blog/HomePage/HomePage'
 
 const supportLinks = [
   {
@@ -102,7 +103,7 @@ export const Home = () => {
    });
   return (
     <main>
-      <section className="mt-16 shadow-2xl bg-slate-100 dark:bg-gray-800 rounded-b-lg">
+      <section className="mt-16 shadow-2xl bg-transparent dark:bg-gray-800 rounded-b-lg">
       {/* Header */}
       <div className="relative pb-32 bg-gray-800">
         <div className="absolute inset-0">
@@ -134,15 +135,15 @@ export const Home = () => {
         </h2>
         <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-4 lg:gap-y-0 lg:gap-x-8">
           {supportLinks.map((link) => (
-            <div key={link.name} className="flex flex-col bg-sky-900 dark:bg-slate-800 rounded-2xl shadow-xl" data-aos="fade-left">
+            <div key={link.name} className="flex flex-col bg-slate-800 dark:bg-slate-800 rounded-2xl shadow-xl" data-aos="fade-left">
               <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
-                <div className="absolute top-0 p-5 inline-block bg-white dark:bg-slate-800 rounded-2xl shadow-lg transform -translate-y-1/2" data-aos="fade-right">
+                <div className="absolute top-0 p-2 inline-block bg-cyan-100 dark:bg-slate-800 rounded-full shadow-2xl transform -translate-y-1/2" data-aos="fade-right">
                   <link.icon className="h-6 w-6 text-sky-500" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-medium text-white">{link.name}</h3>
                 <p className="mt-4 text-base text-white">{link.description}</p>
               </div>
-              <div className="p-6 bg-sky-500 dark:bg-slate-700 rounded-bl-2xl rounded-br-2xl md:px-8">
+              <div className="p-6 bg-slate-500 dark:bg-slate-700 rounded-bl-2xl rounded-br-2xl md:px-8">
                 <a href={link.href} className="text-white font-medium hover:text-cyan-400">
                   Click here<span aria-hidden="true"> &rarr;</span>
                 </a>
@@ -152,6 +153,7 @@ export const Home = () => {
         </div>
       </div>
     </section>
+
   
     <section id="blog" className="bg-transparent dark:bg-slate-800 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8" data-aos="fade-left">
       <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
@@ -204,7 +206,7 @@ export const Home = () => {
         </div>
       </div>
     </section>
-
+<HomePage />
     <Testimonials />
    <section>
   

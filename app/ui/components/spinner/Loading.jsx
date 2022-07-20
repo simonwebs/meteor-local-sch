@@ -1,14 +1,11 @@
-// @ts-nocheck
-import React from "react";
-import { css } from "@emotion/react";
-import RiseLoader from "react-spinners/ClipLoader";
+import React from 'react';
 
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-`;
-export const LoadingComponent = () => {
-  return <RiseLoader color="red" loading={true} css={override} size={90} />;
-};
-
+export const Loading = () => (
+          <div>
+            <div className="mt-10">
+              <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+                Loading...
+              </h3>
+            </div>
+          </div>
+  );

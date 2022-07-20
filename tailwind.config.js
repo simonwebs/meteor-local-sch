@@ -1,6 +1,6 @@
 // @ts-nocheck
-const colors = require('tailwindcss/colors')
-const plugin = require("tailwindcss/plugin");
+const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   content: ['./app/ui/**/*.{js,jsx,ts,tsx}', './client/*.html'],
@@ -15,16 +15,16 @@ module.exports = {
       emerald: colors.emerald,
       indigo: colors.indigo,
       yellow: colors.yellow,
-      purple:  colors.purple,
+      purple: colors.purple,
       silver: colors.silver,
       sky: colors.sky,
       cyan: colors.cyan,
       slate: colors.slate,
       red: colors.red,
       green: colors.green,
-     
+
     },
-   
+
       backgroundOpacity: {
          10: '0.1',
          20: '0.2',

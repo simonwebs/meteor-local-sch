@@ -4,16 +4,16 @@ import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
 import { Outlet } from 'react-router-dom';
 
-export const App = () => (
-    <>
-
-    <div>
-   <Header />
-    <div id="about" className="dark:bg-blueDark
-     bg-white ring-slate-900/5  dark:text-white">
- <Outlet  />
-    </div>
-    <Footer/>
-    </div>
-    </>
-);
+export const App = () => { 
+   
+      return (
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <div className="grow">
+            <Outlet />
+          </div>
+          <Footer/>
+        </div>
+      );
+      }
+    

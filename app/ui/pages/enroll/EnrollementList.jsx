@@ -60,7 +60,7 @@ export const EnrollementList = () => {
                             <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Date of Birth :</span>&nbsp;{enrollement.birthDate}</div>
                              <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Grade :</span>&nbsp;{enrollement.grade}</div>
                               <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Gender :</span>&nbsp;{enrollement.gender}</div>
-                              <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Role :</span>&nbsp;{enrollement.health}</div>
+                              <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Health Status :</span>&nbsp;{enrollement.health}</div>
                                <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Father Name : </span>&nbsp;{enrollement.fatherName}</div>
                                 <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Mother Name : </span>&nbsp;{enrollement.motherName}</div>
                                  <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Country : </span>&nbsp;{enrollement.country}</div>

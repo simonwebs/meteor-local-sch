@@ -6,62 +6,43 @@ Meteor.methods({
   'contacts.insert'({
     name,
     email,
-    imageUrl,
-    fatherName,
-    walletId,
-    motherName,
-    genders,
-    grades,
-    phone,
-    religion,
-    birthDate,
-    country,
-    street,
-    prevSchool,
+    subject,
+    message,
+
   }) {
     check(name, String);
     check(email, String);
-    check(imageUrl, String);
-    check(fatherName, String);
-    check(motherName, String);
-    check(grades, String);
-    check(phone, Number);
-    check(genders, String);
-    check(religion, String);
-    check(birthDate, String);
-    check(country, String);
-    check(walletId, String);
-    check(street, String);
-    check(prevSchool, String);
+    check(subject, String);
+    check(message, String);
 
     if (!name) {
       throw new Meteor.Error('Name is required.');
     }
-    if (!walletId) {
-      throw new Meteor.Error('Wallet ID is required.');
+    if (!email) {
+      throw new Meteor.Error('Email is required.');
     }
+    if (!subject) {
+      throw new Meteor.Error('Subject is required.');
+     }
+      if (!message) {
+        throw new Meteor.Error('Message is required.');
+      }
+
     return ContactsCollection.insert({
       name,
       email,
-      imageUrl,
-      fatherName,
-      walletId,
-      motherName,
-      genders,
-      grades,
-      phone,
-      religion,
-      birthDate,
-      country,
-      street,
-      prevSchool,
+      subject,
+      message,
       createdAt: new Date(),
     });
   },
   'contacts.archive'({ contactId }) {
     check(contactId, String);
 
-    ContactsCollection.update({ _id: contactId }, { $set: { archived: true } });
+    ContactsCollection.update(
+      { _id: contactId },
+      { $set: { archived: true } }
+    );
   },
   'contacts.remove'({ contactId }) {
     check(contactId, String);

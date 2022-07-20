@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { Migrations } from 'meteor/percolate:migrations';
 import { Accounts } from 'meteor/accounts-base';
-import { BlogPost } from '../app/api/blog/BlogPost';
+import { Wallet } from '../app/api/collections/WalletsCollection';
 
 Migrations.add({
   version: 1,
@@ -20,17 +20,17 @@ Migrations.add({
   up() {
     const createdAt = new Date();
     const { _id: userId } = Accounts.findUserByUsername('simon');
-    new BlogPost({
+    new Wallet({
       description: 'Church Meeting',
       userId,
       createdAt,
     }).save();
-    new BlogPost({
+    new Wallet({
       description: 'School Meeting',
       userId,
       createdAt,
     }).save();
-    new BlogPost({
+    new Wallet({
       description: 'Field Meeting',
       userId,
       createdAt,

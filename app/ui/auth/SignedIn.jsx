@@ -17,7 +17,7 @@ export const SignedIn = () => {
         </div>
         <div className='space-y-10'>
           <button
-            onClick={() => navigate(RoutePaths.BLOGSPAGE)}
+            onClick={() => navigate(RoutePaths.WALLET)}
             className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
            
           >

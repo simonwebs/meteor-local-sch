@@ -1,9 +1,10 @@
 // @ts-nocheck
 import React, { Fragment, useEffect, useState } from 'react';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon,  MenuIcon, XIcon } from '@heroicons/react/outline';
 import { GoSignIn } from 'react-icons/go';
+import { RoutePaths } from "../main/RoutePaths"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -12,7 +13,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export const Navbar = () => {
+export const Navbar =  () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const [theme, setTheme] = useState(null);
 
@@ -63,26 +64,19 @@ export const Navbar = () => {
                     </Disclosure.Button>
                   </div>
                   <div className="flex-shrink-0 flex items-center">
-                    <img
-                      className="block lg:hidden h-8 w-auto"
-                      src="./log/Logo.svg"
-                      alt="Logo" />
-                    <img
-                      className="hidden lg:block h-8 w-auto"
-                       src="./log/Logo.svg"
-                      alt="Logo" />
+                  <Link to={RoutePaths.ROOT}><img className="hidden lg:block h-8 w-auto" src="/log/Logo.svg" alt="Meteor"/></Link>
                   </div>
                   <div className="hidden md:ml-8 md:flex md:space-x-8">
                     {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                     <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <a
-                      href="/"
+                    <Link
+                    to={RoutePaths.ROOT}
                       type="button"
                       className="text-md font-bold shadow-lg relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-sky-500/80  hover:text-white rounded-r-full"
                     >
                       <span>Home</span>
-                    </a>
+                    </Link>
                   </div>
                  
                 </div>
@@ -106,71 +100,69 @@ export const Navbar = () => {
                         <div onClick={() => setNavbarOpen(!open)} className="py-1">
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="about"
+                              <Link to={RoutePaths.ABOUT}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                                About
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                            <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="gallery"
+                              <Link to={RoutePaths.GALLERY}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                           Gallery
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="testimonials"
+                              <Link
+                              to={RoutePaths.TESTIMONIALS}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                           Testimonials
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                         </div>
                         <div className="py-1">
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="#"
+                              <Link
+                              to={RoutePaths.CONTACT}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                             Contact
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                         </div>
                         <div className="py-1">
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="sermon"
+                              <Link
+                              to={RoutePaths.SERMON}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                             Sermon
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                         </div>
@@ -197,56 +189,56 @@ export const Navbar = () => {
                         <div onClick={() => setNavbarOpen(!open)} className="py-1">
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="enrollement"
+                              <Link
+                              to={RoutePaths.ENROLLEMENT}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                                Enrollement
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                            <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="reEnrollement"
+                              <Link
+                                to={RoutePaths.REENROLLEMENT}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                           Re-Enrollement
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="employment"
+                              <Link
+                                to={RoutePaths.EMPLOYMENT}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                           Employment
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                         </div>
                         <div className="py-1">
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="donation"
+                              <Link
+                                to={RoutePaths.DONATION}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                             Payment
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                         </div>
@@ -255,13 +247,13 @@ export const Navbar = () => {
                     </Menu>
                     <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <a
-                      href="blogsPage"
+                    <Link
+                       to={RoutePaths.HOMEPAGE}
                       type="button"
                       className="text-md font-bold shadow-lg relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white hover:bg-sky-500/80  hover:text-white rounded-r-full"
                     >
                       <span>News</span>
-                    </a>
+                    </Link>
                   </div>
                  
                 </div>
@@ -281,14 +273,14 @@ export const Navbar = () => {
               
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <a
-                      href="loginForm"
+                    <Link
+                      to={RoutePaths.LOGINFORM}
                       type="button"
                       className="bg-slate-50 backdrop:text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-0 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full"
                     >
                       <GoSignIn className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
                       <span>Login</span>
-                    </a>
+                    </Link>
                   </div>
                  
                 </div>
@@ -300,13 +292,13 @@ export const Navbar = () => {
             {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
           
                   <div  className="flex-shrink-0">
-                    <a
-                      href="/"
+                    <Link
+                      to={RoutePaths.ROOT}
                       type="button"
                       className="bg-slet-50 text-md font-bold shadow-sm relative inline-flex items-center px-3 py-1 border border-transparent dark:text-slate-50 hover:bg-sky-500/80  hover:text-white rounded-r-full"
                     >
                       <span>Home</span>
-                    </a>
+                    </Link>
                   </div>
                  <Menu as="div" className="relative z-30 inline-block text-left py-5">
                     <div>
@@ -328,56 +320,56 @@ export const Navbar = () => {
                         <div onClick={() => setNavbarOpen(!open)} className="py-1">
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="about"
+                              <Link
+                                to={RoutePaths.ABOUT}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                                About
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                            <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="gallery"
+                              <Link
+                                to={RoutePaths.GALLERY}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                           Gallery
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="testimonials"
+                              <Link
+                                to={RoutePaths.TESTIMONIALS}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                           Testimonials
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                         </div>
                         <div className="py-1">
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="sermon"
+                              <Link
+                                to={RoutePaths.SERMON}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                             Sermon
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                         </div>
@@ -405,56 +397,57 @@ export const Navbar = () => {
                         <div onClick={() => setNavbarOpen(!open)} className="py-1">
                           <Menu.Item>
                             {({ active }) => (
-                              <a
+                              <Link
                                 href="enrollement"
+                                to={RoutePaths.ENROLLEMENT}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                                Enrollement
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                            <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="reEnrollement"
+                              <Link
+                                to={RoutePaths.REENROLLEMENT}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                           Re-Enrollement
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="employment"
+                              <Link
+                                to={RoutePaths.EMPLOYMENT}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                           Employment
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                         </div>
                         <div className="py-1">
                           <Menu.Item>
                             {({ active }) => (
-                              <a
-                                href="donation"
+                              <Link
+                                to={RoutePaths.DONATION}
                                 className={classNames(
                                   active ? 'bg-sky-500/80 rounded-r-full text-white' : 'text-gray-700',
                                   'block px-4 py-2 text-sm'
                                 )}
                               >
                             Payment
-                              </a>
+                              </Link>
                             )}
                           </Menu.Item>
                         </div>
@@ -462,13 +455,13 @@ export const Navbar = () => {
                     </Transition>
                     </Menu>
                     <div id='nav' className="flex-shrink-0">
-                    <a
-                      href="blogsPage"
-                      type="button"
+                    <Link
+                      to={RoutePaths.HOMEPAGE}
+                        type="button"
                       className="bg-slate-50 text-md font-bold shadow-sm dark:bg-slate-800 relative inline-flex items-center px-3 py-1 border border-transparent dark:text-white hover:bg-gradient-to-r from-cyan-500/95 to-sky-500/95 hover:text-white rounded-r-full"
                     >
                       <span>News</span>
-                    </a>
+                    </Link>
                   </div>
                     </div>
             </div>
