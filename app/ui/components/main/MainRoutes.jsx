@@ -25,6 +25,7 @@ import { Settings } from'../../pages/admin/Settings';
 import { PlayGround } from '../../pages/playGround/PlayGround';
 import { HomePage } from '../../pages/blog/HomePage/HomePage';
 import { CreatePost } from '../../pages/blog/posts/forms/CreatePost'
+import { Quiz } from '../../pages/quiz/Quiz'
   
   export const MainRoutes = () => {
    
@@ -38,6 +39,7 @@ import { CreatePost } from '../../pages/blog/posts/forms/CreatePost'
              <Route index element={<Home />} />
              <Route element={<LoginForm />} path={RoutePaths.LOGINFORM} />
              <Route element={<Admin />} path={RoutePaths.ADMIN} />
+             <Route element={<Quiz />} path={RoutePaths.QUIZ} />
               <Route element={<Settings />} path={RoutePaths.SETTINGS} />
               <Route element={<Wallet/>} path={RoutePaths.WALLET} />
             <Route element={<Donation />} path={RoutePaths.DONATION} />

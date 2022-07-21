@@ -23,6 +23,7 @@ export const RoutePaths = {
     SETTINGS: 'settings',
     HOMEPAGE: 'homePage',
     CREATEPOST: 'createPost',
+    QUIZ: 'quiz',
 
 };
    
