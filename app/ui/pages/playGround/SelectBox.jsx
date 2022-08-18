@@ -17,6 +17,7 @@ export const SelectBox = ({ id, select, props }) => {
                     <option value="fr"> French</option>
                     <option value="tr"> Turkish</option>
                     <option value="ee"> Ewe</option>
+                    <option value="fn"> Fon</option>
                 </select>
             </div>
         </>

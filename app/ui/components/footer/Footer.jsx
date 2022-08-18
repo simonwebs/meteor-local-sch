@@ -4,9 +4,9 @@ import 'aos/dist/aos.css';
 
 const footerNavigation = {
   solutions: [
-    { name: 'Affiliate', href: '#' },
-    { name: 'French', href: '#' },
-    { name: 'English', href: '#' },
+    { name: 'Affiliate', href: '/' },
+    { name: 'French', href: '/' },
+    { name: 'English', href: '/' },
   ],
   support: [
     { name: 'Enrollement', href: 'enrollement' },
@@ -16,10 +16,10 @@ const footerNavigation = {
   ],
   company: [
     { name: 'About', href: '#' },
-    { name: 'News', href: 'blog' },
+    { name: 'News', href: 'homePage' },
     { name: 'testimonial', href: 'testimonials' },
     { name: 'Gallery', href: 'gallery' },
-    { name: 'Contact', href: '#' },
+    { name: 'Contact', href: 'contact' },
   ],
   legal: [
     { name: 'Privacy', href: '#' },

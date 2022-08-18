@@ -1,10 +1,11 @@
-import SubjectCard from "../components/SubjectCard";
-import Header from "../components/Header";
+// @ts-nocheck
+import {  SubjectCard } from "../components/SubjectCard";
+import { Header } from "../components/Header";
 
-import geoIcon from "../images/geography.svg";
-import histIcon from "../images/history.svg";
-import sciIcon from "../images/science.svg";
-import spaceIcon from "../images/space.svg";
+import { geoIcon } from "../images/geography.svg";
+import { histIcon } from "../images/history.svg";
+import { sciIcon } from "../images/science.svg";
+import {  spaceIcon  } from "../images/space.svg";
 
 function Home(props) {
     const onClick = props.onClick;

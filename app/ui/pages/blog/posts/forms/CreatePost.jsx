@@ -4,14 +4,14 @@ import { useFormik } from "formik";
 import { Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import * as Yup from "yup";
-//import {
-//editPostAction,
-  //fetchPostAction,
-//} from "../../../redux/slices/posts/postSlices";
-import CategoriesOptions from "../../Categories/CategoriesOptions";
-import DisabledBtn from "../../DisabledBtn/DisabledBtn";
-import ServerErrors from "../../ErrorMessage/SeverErrors/ServerErrors";
-import LoadingComponent from "../../Loading/LoadingComponent";
+// import {
+// editPostAction,
+//   fetchPostAction,
+// } from "../../../redux/slices/posts/postSlices";
+import {CategoriesOptions} from "../../Categories/CategoriesOptions";
+import { DisabledBtn } from "../../DisabledBtn/DisabledBtn";
+import { ServerErrors } from "../../ErrorMessage/SeverErrors/ServerErrors";
+import { LoadingComponent } from "../../Loading/LoadingComponent";
 
 const formSchema = Yup.object({
   title: Yup.string().required("Title is required"),

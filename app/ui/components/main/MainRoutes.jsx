@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { Fragment } from 'react';
-import { BrowserRouter, Routes as ReactRoutes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes as ReactRoutes, Route, Outlet , Navigate} from 'react-router-dom';
 import { App } from '../../App'
 import { RoutePaths } from './RoutePaths';
 import { NotFound } from '../../pages/notFound/NotFound';
@@ -26,7 +26,16 @@ import { PlayGround } from '../../pages/playGround/PlayGround';
 import { HomePage } from '../../pages/blog/HomePage/HomePage';
 import { CreatePost } from '../../pages/blog/posts/forms/CreatePost'
 import { Quiz } from '../../pages/quiz/Quiz'
-  
+ 
+
+const ProtectedRoute = ({ user, redirectPath = '/loginPage' }) => {
+  if (!user) {
+    return <Navigate to={redirectPath} replace />;
+  }
+
+  return <Outlet />;
+};
+
   export const MainRoutes = () => {
    
   return (
@@ -49,7 +58,7 @@ import { Quiz } from '../../pages/quiz/Quiz'
             <Route element={<Sermon/>} path={RoutePaths.SERMON} />
             <Route element={<CreatePost/>} path={RoutePaths.CREATEPOST} />
             <Route element={<About/>} path={RoutePaths.ABOUT} />
-            <Route element={<PlayGround/>} path={RoutePaths.PLAYGROUND} />
+            <Route element={<ProtectedRoute><PlayGround /></ProtectedRoute>} path={RoutePaths.PLAYGROUND} />
             <Route element={<HomePage />} path={RoutePaths.HOMEPAGE} />
             <Route element={<Contact/>} path={RoutePaths.CONTACT} />
              <Route element={<Enrollement/>} path={RoutePaths.ENROLLEMENT} />

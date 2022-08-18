@@ -70,7 +70,7 @@ export const TranslateBox = () => {
 
     return (
         <>
-              <div className="mt-16 relative py-4">
+              <div className="mt-16 relative bg-black dark:bg-slate-800 py-4">
        
        <div
          className="absolute inset-0 flex items-center bg-transparent dark:bg-slate-800"
