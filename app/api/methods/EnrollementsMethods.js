@@ -42,13 +42,27 @@ Meteor.methods({
     if (!name) {
       throw new Meteor.Error('Name is required.');
     }
+    if (!fatherName) {
+      throw new Meteor.Error('Father Name is required.');
+    }
+    if (!motherName) {
+      throw new Meteor.Error('Mother Name is required.');
+    }
     if (!email) {
       throw new Meteor.Error('Email is required.');
+    }
+    if (!gender) {
+      throw new Meteor.Error('Gender is required.');
+    }
+    if (!grade) {
+      throw new Meteor.Error('Grade is required.');
     }
     if (!health) {
       throw new Meteor.Error('Health Status is required.');
     }
-
+    if (!imageUrl) {
+      throw new Meteor.Error('Image  is required.');
+    }
 
     if (!phone) {
       throw new Meteor.Error('Phone number is required.');
@@ -72,6 +86,9 @@ Meteor.methods({
 
     if (!religion) {
       throw new Meteor.Error('Religion is required.');
+    }
+    if (!prevSchool) {
+      throw new Meteor.Error('Previus School is required.');
     }
 
     return EnrollementsCollection.insert({

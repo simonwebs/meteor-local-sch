@@ -16,17 +16,21 @@ const EmploymentsSchema = new SimpleSchema({
     type: String,
     regEx: SimpleSchema.RegEx.Health,
   },
+  gender: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Gender,
+  },
   country: {
     type: String,
     regEx: SimpleSchema.RegEx.Country,
   },
   role: {
     type: String,
-    regEx: SimpleSchema.RegEx.Grade,
+    regEx: SimpleSchema.RegEx.Role,
   },
   identityRef: {
     type: String,
-    regEx: SimpleSchema.RegEx.Gender,
+    regEx: SimpleSchema.RegEx.IdentityRef,
   },
   birthDate: {
     type: String,

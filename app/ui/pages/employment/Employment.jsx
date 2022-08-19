@@ -6,11 +6,10 @@ import { ErrorAlert } from '../../components/alerts/ErrorAlert';
 // eslint-disable-next-line import/no-unresolved
 import { SuccessAlert } from '../../components/alerts/SuccessAlert';
 import { MailIcon } from '@heroicons/react/solid'
-import { HiUserCircle, HiPhotograph, HiPhone, HiBriefcase } from "react-icons/hi";
+import { HiUserCircle, HiPhone, HiBriefcase, HiPhotograph } from "react-icons/hi";
 import {FaChurch , FaStreetView, FaRegAddressCard, FaWallet,FaClinicMedical } from "react-icons/fa";
-import { BsFillCalendarDateFill } from "react-icons/bs";
+import { BsFillCalendarDateFill, BsGenderMale } from "react-icons/bs";
 import { GoGlobe } from "react-icons/go";
-import { UploadIcon } from "@heroicons/react/outline";
 
 
 import AOS from 'aos';
@@ -22,7 +21,7 @@ export const Employment = (props) => {
  const [imageUrl, setImageUrl] = useState('');
  const [male, setMale] = useState('');
  const [health, setHealth] = useState('');
-const [female, setFemale] = useState('');
+ const [gender, setGender] = useState('');
   const [street, setStreet] = useState('');
     const [religion, setReligion] = useState('');
     const [role, setRole] = useState('');
@@ -62,8 +61,7 @@ const [female, setFemale] = useState('');
 const saveEmployment = () => {
   Meteor.call('employments.insert', { 
     name,
-     female,
-    male,
+     gender,
      phone,
      togo,
      ghana,
@@ -95,8 +93,7 @@ const saveEmployment = () => {
            setIdentityRef('');
              setWalletId('');
               setPhone('');
-              setFemale('');
-              setMale('');
+              setGender('');
               setRole('');
              setCountry('')
                 setPrevEmployment('');
@@ -222,7 +219,7 @@ const saveEmployment = () => {
           
       <div>             
       <label htmlFor="country" className="block text-sm font-medium text-slate-500 dark:text-white">
-        Country
+        Select Country
       </label>
       <div className="mt-1 relative rounded-md shadow-sm">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -233,7 +230,7 @@ const saveEmployment = () => {
           onChange={e => setCountry(e.target.value)}
            type="country"
            className="text-gray-500 focus:ring-sky-500 focus:border-sky-500 hover:text-white block w-full pl-10 hover:bg-gray-500 backdrop:sm:text-sm border-gray-300 rounded-md"{...props}>
-         <option>Select Country</option>
+      
           <option value="togo">Togo</option>
           <option value="benin">Benin</option>
            <option value="ghana">Ghana</option>
@@ -298,23 +295,53 @@ const saveEmployment = () => {
                 </div>
               </div>
               <div>
+              <div>
+     
+      <div>
+      <label htmlFor="email" className="block text-sm font-medium text-slate-400 dark:text-white">
+      Select Gender
+      </label>
+      <div className="mt-1 relative rounded-md shadow-sm">
+      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <BsGenderMale className="h-5 w-5 text-sky-400 " aria-hidden="true" />
+        </div>
+       
+    <select 
+                     id="gender"
+                      value={gender}
+                      onChange={e => setGender(e.target.value)}
+                      className="text-gray-500 focus:ring-sky-500 focus:border-sky-500 hover:text-white block w-full pl-10 hover:bg-gray-500 backdrop:sm:text-sm border-gray-300 rounded-md"{...props}>
+    
+   
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+ 
+      </div>
+    </div>
+    </div>
+    
+      
+    <div>
       <label htmlFor="imageUrl" className="block text-sm font-medium text-slate-500 dark:text-white">
-        Your Photo
+        Photo
       </label>
       <div className="mt-1 relative rounded-md shadow-sm">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <UploadIcon className="h-5 w-5 text-sky-400" aria-hidden="true" />
+          <HiPhotograph className="h-5 w-5 text-sky-400" aria-hidden="true" />
         </div>
                   <input
                     type="imageUrl"
                     id="imageUrl"
                     value={imageUrl}
                     onChange={e => setImageUrl(e.target.value)}
-                    placeholder="Image Upload"
-                    className="focus:ring-sky-500 text-gray-500 focus:border-sky-500  hover:bg-slate-500 hover:text-white block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                    placeholder="Image Url"
+                    className="focus:ring-sky-500 focus:border-sky-500  hover:bg-slate-500 hover:text-white block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
               </div>
+              </div>
+             
                 <div>
                 <label htmlFor="religion" className="block text-sm font-medium text-slate-500 dark:text-white">
                 Religion
@@ -391,7 +418,7 @@ const saveEmployment = () => {
                 </div>
               </div>
               </div>
-
+            
               <button
                 onClick={saveEmployment}
                 className="bg-gradient-to-l  p-2 px-4 pt-2 mt-3 text-white dark:bg-gradient-to-l from-sky-800 to-cyan-700 rounded-lg baseline hover:bg-cyan-400"
@@ -399,7 +426,6 @@ const saveEmployment = () => {
                 <span>Save Information</span>
               </button>
             </form>
-        
             </div>
       </div>
   

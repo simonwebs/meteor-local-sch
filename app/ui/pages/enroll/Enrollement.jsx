@@ -209,19 +209,21 @@ const saveEnrollement = () => {
     </div>
     <div>
       <label htmlFor="email" className="block text-sm font-medium text-slate-400 dark:text-white">
-        Gender
+      Select Gender
       </label>
       <div className="mt-1 relative rounded-md shadow-sm">
-        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <BsGenderMale className="h-5 w-5 text-sky-400" aria-hidden="true" />
+      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <BsGenderMale className="h-5 w-5 text-sky-400 " aria-hidden="true" />
         </div>
+       
     <select 
                      id="gender"
                       value={gender}
                       onChange={e => setGender(e.target.value)}
                       className="text-gray-500 focus:ring-sky-500 focus:border-sky-500 hover:text-white block w-full pl-10 hover:bg-gray-500 backdrop:sm:text-sm border-gray-300 rounded-md"{...props}>
     
-    <option>Select gender</option>
+    
+    <option>Gender</option>
     <option value="male">Male</option>
     <option value="female">Female</option>
   </select>
@@ -231,11 +233,11 @@ const saveEnrollement = () => {
     <div>
     <div>
       <label htmlFor="grade" className="block text-sm font-medium text-slate-500 dark:text-white">
-       Class
+      Select Class
       </label>
       <div className="mt-1 relative rounded-md shadow-sm">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <HiBriefcase className="h-5 w-5 text-sky-400" aria-hidden="true" />
+        <FaClinicMedical className="h-5 w-5 text-sky-400 " aria-hidden="true" />
         </div>
                     <select
                     type="text"
@@ -245,9 +247,10 @@ const saveEnrollement = () => {
                       placeholder="Grade"
                       autoComplete="gender-type"
                       className="text-gray-500 focus:ring-sky-500 focus:border-sky-500 hover:text-white block w-full pl-10 hover:bg-gray-500 backdrop:sm:text-sm border-gray-300 rounded-md"{...props}>
-                     <option>Select Class</option>
-                      <option value="kg-1">KG 1</option>
-                      <option value="kg-2">KG 2</option>
+                       <option>Class</option>
+                      <option value="kg-1">Nursery 1</option>
+                      <option value="kg-2">Nursery 2</option>
+                      <option value="kg-3">Nursery 3</option>
                       <option value="grade-1">Grade / Basic 1</option>
                       <option value="grade-2">Grade / Basic 2</option>
                       <option value="grade-3">Grade / Basic 3</option>
@@ -285,7 +288,7 @@ const saveEnrollement = () => {
           
       <div>             
       <label htmlFor="country" className="block text-sm font-medium text-slate-500 dark:text-white">
-        Country
+      Select Country
       </label>
       <div className="mt-1 relative rounded-md shadow-sm">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -296,9 +299,9 @@ const saveEnrollement = () => {
           onChange={e => setCountry(e.target.value)}
            type="country"
            className="text-gray-500 focus:ring-sky-500 focus:border-sky-500 hover:text-white block w-full pl-10 hover:bg-gray-500 backdrop:sm:text-sm border-gray-300 rounded-md"{...props}>
-       <option>Select Country</option>
-          <option value="togo">Togo</option>
+             <option>Country</option>
           <option value="benin">Benin</option>
+          <option value="togo">Togo</option>
            <option value="ghana">Ghana</option>
           <option value="nigeria">Nigeria</option>
            <option value="bourkinafaso">Bourkinafaso</option>
@@ -481,7 +484,7 @@ const saveEnrollement = () => {
 
               <button
                 onClick={saveEnrollement}
-                className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="inline-flex items-center mt-4 px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 <span>Save Information</span>
               </button>

@@ -11,6 +11,7 @@ Meteor.methods({
     walletId,
     country,
     health,
+    gender,
     identityRef,
     phone,
     religion,
@@ -30,6 +31,7 @@ Meteor.methods({
     check(birthDate, String);
     check(country, String);
     check(street, String);
+    check(gender, String);
     check(walletId, String);
 
     check(prevEmployment, String);
@@ -39,10 +41,12 @@ Meteor.methods({
     if (!email) {
       throw new Meteor.Error('Email is required.');
     }
+    if (!gender) {
+      throw new Meteor.Error('Gender is required.');
+    }
     if (!health) {
       throw new Meteor.Error('Health status is required.');
     }
-
 
     if (!phone) {
       throw new Meteor.Error('Phone number is required.');
@@ -85,6 +89,7 @@ Meteor.methods({
       walletId,
       imageUrl,
       phone,
+      gender,
       health,
       religion,
       country,

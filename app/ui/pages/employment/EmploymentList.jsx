@@ -60,6 +60,7 @@ export const EmploymentList = () => {
                       <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Employee Name :</span>&nbsp;{employment.name}</div>
                       <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Employee Number :</span>&nbsp;{employment.walletId}</div>
                       <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>ID Refrence Num :</span>&nbsp;{employment.identityRef}</div>
+                      <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Gender :</span>&nbsp;{employment.gender}</div>
                       <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Health Status:</span>&nbsp;{employment.health}</div>
                       <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Role :</span>&nbsp;{employment.role}</div>
                       <div className="text-left dark:text-slate-300 text-sm"><span className='text-sky-400'>Date of Birth :</span>&nbsp;{employment.birthDate}</div>

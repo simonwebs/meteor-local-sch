@@ -67,7 +67,7 @@ export const Testimonials = () => {
           <ul className="p-8 bg-transparent mx-auto shadow-lg mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3">
             {testimonials.map((column, columnIndex) => (
               <li key={columnIndex}>
-                <ul className="space-y-6 sm:space-y-8 bg-transparent dark:slate-800 hover:transition duration-500 hover:scale-125">
+                <ul className="space-y-6 sm:space-y-8 bg-transparent dark:slate-800">
                   {column.map((testimonial, testimonialIndex) => (
                     <li key={testimonialIndex}>
                       <figure className="relative rounded-2xl bg-transparent dark:bg-slate-800 dark:text-slate-300 p-6 shadow-slate-900/10">

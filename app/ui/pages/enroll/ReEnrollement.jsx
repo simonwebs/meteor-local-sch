@@ -144,7 +144,7 @@ const saveReEnrollement = () => {
                       onChange={e => setGender(e.target.value)}
                       className="text-gray-500 focus:ring-sky-500 focus:border-sky-500 hover:text-white block w-full pl-10 hover:bg-gray-500 backdrop:sm:text-sm border-gray-300 rounded-md"{...props}>
     
-    <option>Select gender</option>
+    <option>Gender</option>
     <option value="male">Male</option>
     <option value="female">Female</option>
   </select>
@@ -154,7 +154,7 @@ const saveReEnrollement = () => {
     <div>
     <div>
       <label htmlFor="Grade" className="block text-sm font-medium text-slate-500 dark:text-white">
-       Class
+       Select Class
       </label>
       <div className="mt-1 relative rounded-md shadow-sm">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -168,9 +168,10 @@ const saveReEnrollement = () => {
                       placeholder="Grade"
                       autoComplete="gender-type"
                       className="text-gray-500 focus:ring-sky-500 focus:border-sky-500 hover:text-white block w-full pl-10 hover:bg-gray-500 backdrop:sm:text-sm border-gray-300 rounded-md"{...props}>
-                       <option>Select Class</option>
-                      <option value="kg-1">KG 1</option>
-                      <option value="kg-2">KG 2</option>
+                       <option>Class</option>
+                       <option value="kg-1">Nursery 1</option>
+                      <option value="kg-2">Nursery 2</option>
+                      <option value="kg-3">Nursery 3</option>
                       <option value="grade-1">Grade / Basic 1</option>
                       <option value="grade-2">Grade / Basic 2</option>
                       <option value="grade-3">Grade / Basic 3</option>

@@ -11,28 +11,28 @@ const supportLinks = [
     name: 'Contact Us',
     href: 'contact',
     description:
-    'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+    'For questions about applying to Cedar Christian Bilingual School,',
     icon: PhoneIcon,
   },
   {
-    name: 'Enrollement',
+    name: 'Admissions',
     href: 'enrollement',
     description:
-      'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+      'Consider joining us to build the future together.',
     icon: SupportIcon,
   },
   {
-    name: 'Re-Enrollment',
+    name: 'Re-enrollment',
     href: 'reEnrollement',
     description:
-      'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+      'It is important to re-enroll. Your child(ren) seat may be given to another student if you do not act quickly. NB: Only for current students.',
     icon: NewspaperIcon,
   },
   {
     name: 'Employment',
     href: 'employment',
     description:
-      'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+      'In order to be considered for a position, click the link down below.',
     icon: NewspaperIcon,
   },
 ]
@@ -105,7 +105,7 @@ export const Home = () => {
     <main>
       <section className="mt-16 shadow-2xl bg-transparent dark:bg-gray-800 rounded-b-lg">
       {/* Header */}
-      <div className="relative pb-32 bg-gray-800">
+      <div className="relative pb-20 bg-gray-800">
         <div className="absolute inset-0">
           <img
             className="w-full h-full object-cover" data-aos="fade-right"
@@ -133,18 +133,18 @@ export const Home = () => {
         <h2 className="sr-only" id="contact-heading">
           Contact us
         </h2>
-        <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-4 lg:gap-y-0 lg:gap-x-8">
+        <div className="grid grid-cols-1 gap-y-14 lg:grid-cols-4 lg:gap-y-0 lg:gap-x-8">
           {supportLinks.map((link) => (
             <div key={link.name} className="flex flex-col bg-slate-800 dark:bg-slate-800 rounded-2xl shadow-xl" data-aos="fade-left">
-              <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
-                <div className="absolute top-0 p-2 inline-block bg-cyan-100 dark:bg-slate-800 rounded-full shadow-2xl transform -translate-y-1/2" data-aos="fade-right">
-                  <link.icon className="h-6 w-6 text-sky-500" aria-hidden="true" />
+              <div className="flex-1 relative pt-10 px-2 pb-2 md:px-5">
+                <div className="absolute top-1 p-2 bg-slate-800 rounded-full shadow-2xl transform -translate-y-1/2" data-aos="fade-right">
+                  <link.icon className="h-6 w-6 text-sky-400" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-medium text-white">{link.name}</h3>
+                <h3 className="py-1 text-xl font-medium text-sky-500">{link.name}</h3>
                 <p className="mt-4 text-base text-white">{link.description}</p>
               </div>
-              <div className="p-6 bg-slate-500 dark:bg-slate-700 rounded-bl-2xl rounded-br-2xl md:px-8">
-                <a href={link.href} className="text-white font-medium hover:text-cyan-400">
+              <div className="p-3 bg-slate-500 dark:bg-slate-700 rounded-bl-2xl rounded-br-2xl md:px-8">
+                <a href={link.href} className="ml-20 text-white font-medium hover:text-cyan-400">
                   Click here<span aria-hidden="true"> &rarr;</span>
                 </a>
               </div>
